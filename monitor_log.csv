@@ -1,0 +1,3 @@
+timestamp_utc,api_url,status,http_code,latency_ms,jobs_count,error
+2026-02-10T12:50:55.115497+00:00,https://api.graphql.jobs/,DOWN,,184,,"HTTPSConnectionPool(host='api.graphql.jobs', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""<urllib3.connection.HTTPSConnection object at 0x0000017A4D507230>: Failed to re"
+2026-02-10T12:52:47.503298+00:00,https://www.arbeitnow.com/api/job-board-api,UP,200,1845,100,
