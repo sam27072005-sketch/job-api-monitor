@@ -72,7 +72,20 @@ def main():
         "error": error,
     }
 
-    append_log_row(row)
+    append_log_row(row)    # --- Website outputs (GitHub Pages) ---
+    os.makedirs("docs", exist_ok=True)
+
+    # Save latest status for dashboard
+    with open("docs/status.json", "w", encoding="utf-8") as f:
+        json.dump(row, f, indent=2)
+
+    # Copy the log CSV for dashboard
+    try:
+        import shutil
+        shutil.copyfile(LOG_FILE, "docs/history.csv")
+    except Exception:
+        pass
+
     print(json.dumps(row, indent=2))
 
     if status != "UP":
